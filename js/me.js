@@ -16,6 +16,8 @@ function greeting() {
         case (16 < hours || hours < 24): time_of_day = "evening";
     }
     
+    console.log(hours)
+
     greet_message = `Good ${time_of_day}, I'm Brandon.`;
 
     document.getElementById('time').innerHTML = greet_message;
