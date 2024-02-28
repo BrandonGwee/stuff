@@ -11,11 +11,11 @@ function greeting() {
     let time_of_day = "";
 
     if(0 < hours && hours < 11) {
-        time_of_day = "morning";
+        time_of_day = "Morning";
     } else if (11 < hours && hours < 16) {
-        time_of_day = "afternoon";
+        time_of_day = "Afternoon";
     } else if (hours < 24) {
-        time_of_day = "evening";
+        time_of_day = "Evening";
     }
 
     greet_message = `Good ${time_of_day}, I'm Brandon.`;
