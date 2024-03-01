@@ -10,13 +10,15 @@ function greeting() {
 
     let time_of_day = "";
 
-    if(-1 < hours && hours < 11) {
+    if(-1 < hours && hours < 12) {
         time_of_day = "Morning";
-    } else if (11 < hours && hours < 16) {
+    } else if (11 < hours && hours < 17) {
         time_of_day = "Afternoon";
-    } else if (hours < 16 && hours < 24) {
+    } else if (16 < hours && hours < 24) {
         time_of_day = "Evening";
     }
+
+    console.log(hours)
 
     greet_message = `Good ${time_of_day}, I'm Brandon.`;
 
