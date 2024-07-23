@@ -17,6 +17,10 @@ function gibberish() {
     output = prefixes[ randomNum(0, prefixes.length) ] 
     + consonants[ randomNum(0, consonants.length) ]
     + vowels[ randomNum(0, vowels.length) ];
+
+    console.log(output);
+
+    return output;
 }
 
 function updateTitle (text) {
