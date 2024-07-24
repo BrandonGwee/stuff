@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 })
 
 function randomNum (range_min, range_max) {
-    return Math.floor( Math.random() * (range_max - range_min) ) = range_min;
+    return (Math.floor( Math.random() * (range_max - range_min) ) + range_min);
 }
 
 function gibberish() {
