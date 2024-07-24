@@ -26,7 +26,7 @@ function gibberish() {
 function updateTitle (text) {
     let title = ``;
 
-    let capitalised_text = text[0].toUpperCase().concat(text.slice(1, -1));
+    let capitalised_text = (text[0].toUpperCase()).concat(text.slice(1, -1));
 
     title = `${capitalised_text} Pictionary`
 
