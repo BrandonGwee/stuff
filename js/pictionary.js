@@ -4,7 +4,7 @@ import { weighted_vowels as vowels} from "./gibberish";
 import { weighted_consonants as consonants } from "./gibberish";
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    updateTitle(gibberish);
+    updateTitle(gibberish());
 })
 
 function randomNum (range_min, range_max) {
