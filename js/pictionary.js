@@ -14,9 +14,9 @@ function randomNum (range_min, range_max) {
 function gibberish() {
     let output = '';
 
-    output = prefixes[ randomNum(0, prefixes.length) ] 
-    + consonants[ randomNum(0, consonants.length) ]
-    + vowels[ randomNum(0, vowels.length) ];
+    output = prefixes[randomNum(0, prefixes.length)] 
+    .concat(consonants[randomNum(0, consonants.length)],
+    vowels[ randomNum(0, vowels.length) ]);
 
     console.log(output);
 
@@ -26,7 +26,7 @@ function gibberish() {
 function updateTitle (text) {
     let title = ``;
 
-    let capitalised_text = text[0].toUpperCase() + text.slice(1, -1);
+    let capitalised_text = text[0].toUpperCase().concat(text.slice(1, -1));
 
     title = `${capitalised_text} Pictionary`
 
