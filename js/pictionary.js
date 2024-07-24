@@ -19,7 +19,7 @@ function gibberish() {
     + vowels[randomNum(0, vowels.length)];
 
     for (let i = 0; i < randomNum(0, 6); i++) {
-        if (randomNum(0,6) < 3) {
+        if (randomNum(0,6) < 2) {
             output += vowels[randomNum(0, vowels.length)];
         } 
         else {
