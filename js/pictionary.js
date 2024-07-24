@@ -28,7 +28,7 @@ function updateTitle (text) {
 
     capitalised_text = text[0].toUpperCase() + text.slice(1, -1);
 
-    title = `${text} Pictionary`
+    title = `${capitalised_text} Pictionary`
 
     document.getElementById('pict_title').innerHTML = title;
 }
