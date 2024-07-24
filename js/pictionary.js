@@ -1,7 +1,7 @@
-import { prefixes } from "./gibberish.js";
-import { suffixes } from "./gibberish.js";
-import { weighted_vowels as vowels} from "./gibberish.js";
-import { weighted_consonants as consonants } from "./gibberish.js";
+import { prefixes } from "./word_parts.js";
+import { suffixes } from "./word_parts.js";
+import { weighted_vowels as vowels} from "./word_parts.js";
+import { weighted_consonants as consonants } from "./word_parts.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
     updateTitle(gibberish());
