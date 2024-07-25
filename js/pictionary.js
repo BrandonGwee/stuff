@@ -18,7 +18,7 @@ function gibberish() {
     + consonants[randomNum(0, consonants.length)]
     + vowels[randomNum(0, vowels.length)];
 
-    for (let i = 0; i < randomNum(0, 6); i++) {
+    for (let i = 0; i < randomNum(0, 3); i++) {
         if (randomNum(0,6) < 2) {
             output += vowels[randomNum(0, vowels.length)];
         } 
@@ -38,7 +38,7 @@ function updateTitle (text) {
 
     let capitalised_text = (text[0].toUpperCase()).concat(text.slice(1, -1));
 
-    title = `${capitalised_text} Pictionary`
+    title = `A Very "${capitalised_text}" Pictionary`
 
     document.getElementById('pict_title').innerHTML = title;
 }
