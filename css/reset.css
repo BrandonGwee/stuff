@@ -45,3 +45,10 @@ body {
   color: #818181;
   font-size: smaller;
 }
+
+#gallery {
+  position: relative;
+  width: 135%;
+  padding-left: 10%;
+  background-color: bisque;
+}
