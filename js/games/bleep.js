@@ -43,37 +43,36 @@ function stopLoopSnippet(audio) {
   audio.ontimeupdate = null;
 }
 
-// Button events
-btn.addEventListener('mousedown', (e) => {
-  // Change image
-  img.src = imgDown;
-  // Play click sound snippet
-  playSnippet(clickAudio, clickStart, clickEnd);
-  // Start looping 1kHz tone
-  playLoopSnippet(toneAudio, toneStart, toneEnd);
-});
+// Track if button is pressed to avoid duplicate triggers
+let isPressed = false;
 
-// Button events
-btn.addEventListener('touchstart', (e) => {
-  // Change image
+function startCensor(e) {
+  // Prevent scrolling on touch
+  if (e.type.startsWith('touch')) e.preventDefault();
+  if (isPressed) return;
+  isPressed = true;
   img.src = imgDown;
-  // Play click sound snippet
   playSnippet(clickAudio, clickStart, clickEnd);
-  // Start looping 1kHz tone
   playLoopSnippet(toneAudio, toneStart, toneEnd);
-});
+}
 
-// On mouseup or mouseleave, stop tone and play slide sound
-function stopCensor() {
-  // Change image back
+function stopCensor(e) {
+  if (!isPressed) return;
+  isPressed = false;
   img.src = imgUp;
-  // Stop tone
   stopLoopSnippet(toneAudio);
-  // Play slide sound snippet
   playSnippet(clickAudio, slideStart, slideEnd);
 }
+
+// Desktop
+btn.addEventListener('mousedown', startCensor);
 btn.addEventListener('mouseup', stopCensor);
-btn.addEventListener('touchend', stopCensor); // For touch devices
+btn.addEventListener('mouseleave', stopCensor);
+
+// Mobile
+btn.addEventListener('touchstart', startCensor, {passive: false});
+btn.addEventListener('touchend', stopCensor);
+btn.addEventListener('touchcancel', stopCensor);
 
 // Prevent default drag behavior on image
 img.ondragstart = () => false;
