@@ -4,10 +4,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ideas for Games</title>
         <link rel="icon" type="image/x-icon" href="../icons/khroma logo.png">
-        <link href="../css/reset.css" rel="stylesheet"></style>
+        <link href="../css/reset.css" rel="stylesheet"></link>
+        <link href="../css/games.css" rel="stylesheet"></link>
         <script src="../js/global.js"></script>
-        <script type="module" src="../js/pictionary.js"></script>
-        <script type="module" src="../js/word_parts.js"></script>
+        <script type="module" src="../js/games/bleep.js"></script>
+        <script type="module" src="../js/games/pictionary.js"></script>
+        <script type="module" src="../js/games/word_parts.js"></script>
     </head>
 
     <body>
@@ -104,7 +106,7 @@
 
             <ul>
                 <li>
-                    No you're not crazy, that word is (probably) not real. (Refresh the page and it changes)!
+                    No you're not crazy, that word is (probably) not real. <a href="../html/games.html">(Refresh the page and it changes)!</a>
                 </li>
                 <li>
                     This web game is partially an experiment to see how people depict or describe words that are plausibly from SOME language but are nonetheless complete nonsense.
@@ -120,6 +122,17 @@
             <div class="status">
                 <h6>Status:</h6> <p class="proto"><a href="https://replit.com/@BrandonGwee1/I-Think-Thats-a-Word?v=1" target="_blank">A text-based prototype made in python is available</a></p>
             </div>
+        </div>
+
+        <div id="bleep">
+            <div id="censor-btn">
+                <img id="censor-img" src="../pictures/bleep/button.png" alt="Bleep Button" draggable="false" />
+                <!-- Preload audio elements -->
+                <audio id="tone" src="../pictures/bleep/23908070_1khz-beep_by_sfxforyou_preview.mp3" preload="auto" loop></audio>
+                <audio id="click" src="../pictures/bleep/old-radio-button-click-97549.mp3" preload="auto"></audio>
+            </div>
+
+            <p>Inexplicable bleep button</p>
         </div>
     </body>
  </html>
