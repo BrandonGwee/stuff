@@ -49,7 +49,7 @@ function playLoopSnippet(audio, start, end) {
 function stopLoopSnippet(audio) {
   audio.pause();
   audio.ontimeupdate = null;
-}
+} 
 
 // Track if button is pressed to avoid duplicate triggers
 let isPressed = false;
