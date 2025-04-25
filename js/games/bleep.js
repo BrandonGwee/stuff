@@ -1,17 +1,25 @@
+// Provided by Perplexity
+
 // Elements
 const btn = document.getElementById('censor-btn');
 const img = document.getElementById('censor-img');
 const clickAudio = document.getElementById('click');
 const toneAudio = document.getElementById('tone');
 
-// Button images
+// Button images (make sure these paths are correct and files exist)
 const imgUp = '../../pictures/bleep/button.png';
 const imgDown = '../../pictures/bleep/bleep-button-pressed.png';
 
+// Preload images to avoid flicker/alt text
+const preloadUp = new Image();
+preloadUp.src = imgUp;
+const preloadDown = new Image();
+preloadDown.src = imgDown;
+
 // Audio snippets (set start/end times in seconds)
-const clickStart = 0.15, clickEnd = 0.2; // Example: first 0.2s is click
-const slideStart = 0.25, slideEnd = 0.3; // Example: 0.2s-0.5s is slide
-const toneStart = 15.5, toneEnd = 17;   // Example: loop 1s section
+const clickStart = 0.15, clickEnd = 0.2;
+const slideStart = 0.25, slideEnd = 0.3;
+const toneStart = 15.5, toneEnd = 17;
 
 // Utility: play snippet of an audio element
 function playSnippet(audio, start, end) {
@@ -51,6 +59,7 @@ function startCensor(e) {
   if (e.type.startsWith('touch')) e.preventDefault();
   if (isPressed) return;
   isPressed = true;
+  // Only set to valid image path
   img.src = imgDown;
   playSnippet(clickAudio, clickStart, clickEnd);
   playLoopSnippet(toneAudio, toneStart, toneEnd);
@@ -59,6 +68,7 @@ function startCensor(e) {
 function stopCensor(e) {
   if (!isPressed) return;
   isPressed = false;
+  // Only set to valid image path
   img.src = imgUp;
   stopLoopSnippet(toneAudio);
   playSnippet(clickAudio, slideStart, slideEnd);
@@ -76,3 +86,6 @@ btn.addEventListener('touchcancel', stopCensor);
 
 // Prevent default drag behavior on image
 img.ondragstart = () => false;
+
+// OPTIONAL: Set initial image on page load
+img.src = imgUp;
