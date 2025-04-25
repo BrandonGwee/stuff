@@ -7,8 +7,8 @@ const clickAudio = document.getElementById('click');
 const toneAudio = document.getElementById('tone');
 
 // Button images (make sure these paths are correct and files exist)
-const imgUp = '../../pictures/bleep/button.png';
-const imgDown = '../../pictures/bleep/bleep-button-pressed.png';
+const imgUp = '../pictures/bleep/button.png';
+const imgDown = '../pictures/bleep/bleep-button-pressed.png';
 
 // Preload images to avoid flicker/alt text
 const preloadUp = new Image();
