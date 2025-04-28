@@ -3,7 +3,7 @@ const PNG_FRAME_COUNT = 34; // Number of frames in your PNG sequence
 const FRAME_RATE = 12; // Frames per second for animation
 const JUMP_HEIGHT = 200; // How high the character jumps (in px)
 const ANIMATION_DURATION = PNG_FRAME_COUNT / FRAME_RATE; // seconds
-const SCRATCH_URL = "https://scratch.mit.edu/users/KhromaCodes/";
+const SCRATCH_URL = "https://scratch.mit.edu/users/KhromaCodes/projects/";
 
 const BOING_SFX = document.getElementById("boing-sfx");
 const SHOT_SFX = document.getElementById("shot-sfx");
