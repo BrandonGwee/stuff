@@ -9,7 +9,7 @@ const SCRATCH_URL = "https://scratch.mit.edu/users/KhromaCodes/";
 const frames = [];
 for (let i = 0; i < PNG_FRAME_COUNT; i++) {
     const img = new Image();
-    img.src = `../../pictures/scratch+open+tab/frame_${String(i + 1).padStart(5, '0')}.png`; // e.g., frames/frame01.png
+    img.src = `../pictures/scratch+open+tab/frame_${String(i + 1).padStart(5, '0')}.png`; // e.g., frames/frame01.png
     frames.push(img);
 
     console.log(img.src);
