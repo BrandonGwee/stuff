@@ -9,7 +9,7 @@ const SCRATCH_URL = "https://scratch.mit.edu/users/KhromaCodes/";
 const frames = [];
 for (let i = 0; i < PNG_FRAME_COUNT; i++) {
     const img = new Image();
-    img.src = `./pictures/scratch+open+tab/frame_${String(i + 1).padStart(5, '0')}.png`; // e.g., frames/frame01.png
+    img.src = `../pictures/scratch+open+tab/frame_${String(i + 1).padStart(5, '0')}.png`; // e.g., frames/frame01.png
     frames.push(img);
 
     console.log(img.src);
@@ -39,7 +39,7 @@ container.addEventListener('click', async () => {
     playPNGSequence().then(() => { sequenceDone = true; });
 
     // 2. After a short delay, jump up (ease out)
-    await wait(700);
+    await wait(600);
     await animateJump(JUMP_HEIGHT, 300, 'easeOut');
 
     // Bounce when shooting
@@ -56,8 +56,8 @@ container.addEventListener('click', async () => {
     await animateJump((-JUMP_HEIGHT - 600), 1000, 'easeIn');
 
     // 6. Wait and return to original position (ease out)
-    await wait(1000);
-    await animateJump(-360, 100, 'easeOut');
+    await wait(300);
+    await animateJump(-250, 100, 'easeOut');
 
     // 7. Reset state
     clickable = true;
