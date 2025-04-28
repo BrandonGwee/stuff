@@ -11,11 +11,9 @@ for (let i = 0; i < PNG_FRAME_COUNT; i++) {
     const img = new Image();
     img.src = `../../pictures/scratch+open+tab/frame_${String(i + 1).padStart(5, '0')}.png`; // e.g., frames/frame01.png
     frames.push(img);
-}
 
-document.addEventListener("DOMContentLoaded", (event) => {
-    console.log(frames);
-})
+    console.log(img.src);
+}
 
 const container = document.getElementById('scratch-jump');
 const canvas = document.getElementById('scratch-canvas');

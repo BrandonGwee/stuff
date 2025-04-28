@@ -9,7 +9,7 @@
 #scratch-jump {
     position: fixed;
     left: -100px;
-    bottom: -360px;
+    bottom: -250px;
     /* Only eyes visible, adjust as needed */
     overflow: hidden;
     z-index: 1000;
