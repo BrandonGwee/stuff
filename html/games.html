@@ -1,138 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Ideas for Games</title>
-        <link rel="icon" type="image/x-icon" href="../icons/khroma logo.png">
-        <link href="../css/reset.css" rel="stylesheet"></link>
-        <link href="../css/games.css" rel="stylesheet"></link>
-        <script src="../js/global.js"></script>
-        <script type="module" src="../js/games/bleep.js"></script>
-        <script type="module" src="../js/games/pictionary.js"></script>
-        <script type="module" src="../js/games/word_parts.js"></script>
-    </head>
 
-    <body>
-        
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="../index.html">Home</a>
-            <a href="../html/music.html">Music</a>
-            <a href="../html/stories.html">Stories</a>
-            <a href="../html/drawings.html">Drawings</a>
-            <a href="../html/games.html">Games</a>
-            <a href="../html/me.html">About</a>
-            <a href="mailto:brandongwee.contact@gmail.com" target="_blank" style="font-size:16px">Email</a>
-        </div>
-          
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-        
-        <h2>Ideas for Games I Have</h2>
-        <p>Right now these might just be the core concept, or being developed, or even released. I will update this page depending on the case.</p>
-        <p>I'm also eager to make new friends whom I can work on these projects with.</p>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ideas for Games</title>
+    <link rel="icon" type="image/x-icon" href="../icons/khroma logo.png">
+    <link href="../css/reset.css" rel="stylesheet">
+    </link>
+    <link href="../css/games.css" rel="stylesheet">
+    </link>
+    <script src="../js/global.js"></script>
+    <script type="module" src="../js/games/bleep.js"></script>
+    <script type="module" src="../js/games/pictionary.js"></script>
+    <script type="module" src="../js/games/word_parts.js"></script>
+</head>
 
-        <div id="custom">
-            <h3>A top down turn based local / online board game where players create their own characters in a 32x32 pixel sprite creator.</h3>
-            <ul>
-                <li>4 players are dropped into an 8x8 grid, everyone must decide their move before they all move at the same time. All characters can only move 1 space in one of the 4 cardinal directions (&uarr;, &darr;, &larr;, or &rarr;)</li>
+<body>
 
-                <li>When 2 players interact with each other, they are placed in a combat minigame where they must hit their opponent's character with more force than their's is hit with.
-                    Characters move and attack by being thrown around <a href="https://scratch.mit.edu/projects/737378093/" target="_blank">(a proof-of-concept can be found here)</a>. 
-                    Collisions will not cause damage if the character isn't moving fast enough, but it is at that speed when they can be clicked on and thrown again.
-                    When a battle is decided, the losing player's character is thrown backwards 3 tiles and one of their 3 hitpoints is deducted. 
-                </li>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../index.html">Home</a>
+        <a href="../html/music.html">Music</a>
+        <a href="../html/stories.html">Stories</a>
+        <a href="../html/drawings.html">Drawings</a>
+        <a href="../html/games.html">Games</a>
+        <a href="../html/me.html">About</a>
+        <a href="mailto:brandongwee.contact@gmail.com" target="_blank" style="font-size:16px">Email</a>
+    </div>
 
-                <li>Items will appear every other turn, which players can either use on the board, or non-combatants can use as a disruption when the other players are battling.</li>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
-                <li>Boards will have different themes and different hazards to match.</li>
+    <h2>Ideas for Games I Have</h2>
+    <p>Right now these might just be the core concept, or being developed, or even released. I will update this page
+        depending on the case.</p>
+    <p>I'm also eager to make new friends whom I can work on these projects with.</p>
 
-                <li>The game will need players to sign in and verify that they're 16 or older because at least 40% of sprites are not going to suitable for all ages and there's no way the team can moderate all of them.
-                    However the game will have a votekicking system where players can be forced out the match if the majority decides they should be. They will be replaced with a computer controlled character using a garbled, unrecognisable version of their sprite.
-                </li>
-            </ul>
+    <div id="scratch-jump">
+        <canvas id="scratch-canvas" width="700%" height="700%"></canvas>
+    </div>
+    <script src="../js/games/scratch-jump.js"></script>
 
-            <div class="status">
-                <h6>Status:</h6> <p class="concept">Only the premise has been established.</p>
-            </div>
+    <div id="custom">
+        <h3>A top down turn based local / online board game where players create their own characters in a 32x32 pixel
+            sprite creator.</h3>
+        <ul>
+            <li>4 players are dropped into an 8x8 grid, everyone must decide their move before they all move at the same
+                time. All characters can only move 1 space in one of the 4 cardinal directions (&uarr;, &darr;, &larr;,
+                or &rarr;)</li>
 
-        </div>
+            <li>When 2 players interact with each other, they are placed in a combat minigame where they must hit their
+                opponent's character with more force than their's is hit with.
+                Characters move and attack by being thrown around <a href="https://scratch.mit.edu/projects/737378093/"
+                    target="_blank">(a proof-of-concept can be found here)</a>.
+                Collisions will not cause damage if the character isn't moving fast enough, but it is at that speed when
+                they can be clicked on and thrown again.
+                When a battle is decided, the losing player's character is thrown backwards 3 tiles and one of their 3
+                hitpoints is deducted.
+            </li>
 
-        <div id="disc">
-            <h3>A rhythm game based on vinyl records.</h3>
+            <li>Items will appear every other turn, which players can either use on the board, or non-combatants can use
+                as a disruption when the other players are battling.</li>
 
-            <ul>
-                <li>The game uses a chart like <a href="https://www.konami.com/games/asia/en/products/ddr_a/" target="_blank">Dance Dance Revolution</a> or <a href="https://en.wikipedia.org/wiki/Guitar_Hero" target="_blank">Guitar Hero</a>
-                    The difference here being that notes rotate around on a circular disc, appearing at the 0&deg; mark and having to be pressed as they complete one rotation around the disk. The disk takes 4 beats to complete 1 full rotation.
-                </li>
+            <li>Boards will have different themes and different hazards to match.</li>
 
-                <li>This game's main mechanic is taken from turntablists, who build their performance around altering the playback of their songs to produce new music, which is adapted into the game by the speed of the song changing, or the song being paused, or even reversing which requires previously hit notes to be hit again.</li>
+            <li>The game will need players to sign in and verify that they're 16 or older because at least 40% of
+                sprites are not going to suitable for all ages and there's no way the team can moderate all of them.
+                However the game will have a votekicking system where players can be forced out the match if the
+                majority decides they should be. They will be replaced with a computer controlled character using a
+                garbled, unrecognisable version of their sprite.
+            </li>
+        </ul>
 
-                <li>
-                    The game's levels are sorted into playlists, and each one culminates in a "Remix Track", a medley of all the songs in that track, with additional music changes to the existing tracks.
-                </li>
-
-                <li><strong>You Are Not The DJ. You Are At His Mercy.</strong></li>
-            </ul>
-
-            <div class="status">
-                <h6>Status:</h6> <p class="concept">Only the premise has been established.</p>
-            </div>
-            
+        <div class="status">
+            <h6>Status:</h6>
+            <p class="concept">Only the premise has been established.</p>
         </div>
 
-        <div id="microgame">
-            <h3>The project I would first suggest to a team: A microgame collection.</h3>
+    </div>
 
-            <ul>
-                <li>Microgames have very simple control schemes and only last about 4-5 seconds, that time being reduced after every few games.</li>
-                
-                <li>The current most popular example of a microgame collection is the <a href="https://www.nintendo.com/jp/character/wario/en/index.html">Warioware series of games</a>, so most of the features listed here just <s>plagiarise</s> borrow elements as inspiration from that.</li>
+    <div id="disc">
+        <h3>A rhythm game based on vinyl records.</h3>
 
-                <li>Microgames come in sets that all follow a theme (e.g. Sports, Fantasy). Each level features a random selection of microgames from that set, and in the Warioware games, culminates in a Boss microgame, which is longer and a bit more involved than the other games.</li>
+        <ul>
+            <li>The game uses a chart like <a href="https://www.konami.com/games/asia/en/products/ddr_a/"
+                    target="_blank">Dance Dance Revolution</a> or <a href="https://en.wikipedia.org/wiki/Guitar_Hero"
+                    target="_blank">Guitar Hero</a>
+                The difference here being that notes rotate around on a circular disc, appearing at the 0&deg; mark and
+                having to be pressed as they complete one rotation around the disk. The disk takes 4 beats to complete 1
+                full rotation.
+            </li>
 
-                <li>Players have a limited number of lives for each level, and the game ends either when all lives are lost, or if we implement boss microgames, this is the player's first playthrough of that level and the boss microgame is cleared. After the level is cleared once, it becomes a high-score-chaser and only running out of lives ends the game.</li>
+            <li>This game's main mechanic is taken from turntablists, who build their performance around altering the
+                playback of their songs to produce new music, which is adapted into the game by the speed of the song
+                changing, or the song being paused, or even reversing which requires previously hit notes to be hit
+                again.</li>
 
-                <li>Each level has a character to host the games, and starts with framing sequence where the character tries to do something, with their success or failure correlating to the player's performance in the microgames.</li>
-            </ul>
+            <li>
+                The game's levels are sorted into playlists, and each one culminates in a "Remix Track", a medley of all
+                the songs in that track, with additional music changes to the existing tracks.
+            </li>
 
-            <div class="status">
-                <h6>Status:</h6> <p class="concept">Only the premise has been established.</p>
-            </div>
+            <li><strong>You Are Not The DJ. You Are At His Mercy.</strong></li>
+        </ul>
 
+        <div class="status">
+            <h6>Status:</h6>
+            <p class="concept">Only the premise has been established.</p>
         </div>
 
-        <div id="pict">
-            <h3 id="pict_title"></h3>
+    </div>
 
-            <ul>
-                <li>
-                    No you're not crazy, that word is (probably) not real. <a href="../html/games.html">(Refresh the page and it changes)!</a>
-                </li>
-                <li>
-                    This web game is partially an experiment to see how people depict or describe words that are plausibly from SOME language but are nonetheless complete nonsense.
-                </li>
-                <li>
-                    Gameplay follows the format of <a href="https://skribbl.io">Skribbl.io</a>, but instead of typing out their guess, guessing players select from a list of words (20 in the prototype), with the ability to search for words by substring.
-                </li>
-                <li>
-                    This game was inspired by <a href="https://youtu.be/Td2x8s9GZlo?si=4JAr8jCODR0kfkHE" target="_blank">creator Gooseworx's video BLUE_CHANNEL:THALASIN</a> (Content warning: Video is an analogue horror that features distorted human faces. Consider Incognito mode and/or someone tolerant to such content before watching.)
-                </li>
-            </ul>
+    <div id="microgame">
+        <h3>The project I would first suggest to a team: A microgame collection.</h3>
 
-            <div class="status">
-                <h6>Status:</h6> <p class="proto"><a href="https://replit.com/@BrandonGwee1/I-Think-Thats-a-Word?v=1" target="_blank">A text-based prototype made in python is available</a></p>
-            </div>
+        <ul>
+            <li>Microgames have very simple control schemes and only last about 4-5 seconds, that time being reduced
+                after every few games.</li>
+
+            <li>The current most popular example of a microgame collection is the <a
+                    href="https://www.nintendo.com/jp/character/wario/en/index.html">Warioware series of games</a>, so
+                most of the features listed here just <s>plagiarise</s> borrow elements as inspiration from that.</li>
+
+            <li>Microgames come in sets that all follow a theme (e.g. Sports, Fantasy). Each level features a random
+                selection of microgames from that set, and in the Warioware games, culminates in a Boss microgame, which
+                is longer and a bit more involved than the other games.</li>
+
+            <li>Players have a limited number of lives for each level, and the game ends either when all lives are lost,
+                or if we implement boss microgames, this is the player's first playthrough of that level and the boss
+                microgame is cleared. After the level is cleared once, it becomes a high-score-chaser and only running
+                out of lives ends the game.</li>
+
+            <li>Each level has a character to host the games, and starts with framing sequence where the character tries
+                to do something, with their success or failure correlating to the player's performance in the
+                microgames.</li>
+        </ul>
+
+        <div class="status">
+            <h6>Status:</h6>
+            <p class="concept">Only the premise has been established.</p>
         </div>
 
-        <div id="bleep">
-            <h3 id="button">Inexplicable bleep button</h3>
+    </div>
 
-            <div id="censor-btn">
-                <img id="censor-img" src="../pictures/bleep/button.png" alt="Bleep Button" draggable="false" />
-                <!-- Preload audio elements -->
-                <audio id="tone" src="../pictures/bleep/23908070_1khz-beep_by_sfxforyou_preview.mp3" preload="auto" loop></audio>
-                <audio id="click" src="../pictures/bleep/old-radio-button-click-97549.mp3" preload="auto"></audio>
-            </div>
+    <div id="pict">
+        <h3 id="pict_title"></h3>
+
+        <ul>
+            <li>
+                No you're not crazy, that word is (probably) not real. <a href="../html/games.html">(Refresh the page
+                    and it changes)!</a>
+            </li>
+            <li>
+                This web game is partially an experiment to see how people depict or describe words that are plausibly
+                from SOME language but are nonetheless complete nonsense.
+            </li>
+            <li>
+                Gameplay follows the format of <a href="https://skribbl.io">Skribbl.io</a>, but instead of typing out
+                their guess, guessing players select from a list of words (20 in the prototype), with the ability to
+                search for words by substring.
+            </li>
+            <li>
+                This game was inspired by <a href="https://youtu.be/Td2x8s9GZlo?si=4JAr8jCODR0kfkHE"
+                    target="_blank">creator Gooseworx's video BLUE_CHANNEL:THALASIN</a> (Content warning: Video is an
+                analogue horror that features distorted human faces. Consider Incognito mode and/or someone tolerant to
+                such content before watching.)
+            </li>
+        </ul>
+
+        <div class="status">
+            <h6>Status:</h6>
+            <p class="proto"><a href="https://replit.com/@BrandonGwee1/I-Think-Thats-a-Word?v=1" target="_blank">A
+                    text-based prototype made in python is available</a></p>
         </div>
-    </body>
- </html>
+    </div>
+
+    <div id="bleep">
+        <h3 id="button">Inexplicable bleep button</h3>
+
+        <div id="censor-btn">
+            <img id="censor-img" src="../pictures/bleep/button.png" alt="Bleep Button" draggable="false" />
+            <!-- Preload audio elements -->
+            <audio id="tone" src="../pictures/bleep/23908070_1khz-beep_by_sfxforyou_preview.mp3" preload="auto"
+                loop></audio>
+            <audio id="click" src="../pictures/bleep/old-radio-button-click-97549.mp3" preload="auto"></audio>
+        </div>
+    </div>
+</body>
+
+</html>

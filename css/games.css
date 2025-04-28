@@ -1,6 +1,24 @@
 #censor-img {
     cursor: pointer;
     user-select: none;
-    width: 240px; /* Adjust as needed */
+    width: 240px;
+    /* Adjust as needed */
     height: auto;
+}
+
+#scratch-jump {
+    position: fixed;
+    left: -100px;
+    bottom: -360px;
+    /* Only eyes visible, adjust as needed */
+    overflow: hidden;
+    z-index: 1000;
+    cursor: pointer;
+    transition: bottom 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+    /* easeOut for pop-in */
+}
+
+#scratch-jump.inactive {
+    pointer-events: none;
+    cursor: default;
 }
