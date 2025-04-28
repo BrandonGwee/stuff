@@ -5,6 +5,9 @@ const JUMP_HEIGHT = 200; // How high the character jumps (in px)
 const ANIMATION_DURATION = PNG_FRAME_COUNT / FRAME_RATE; // seconds
 const SCRATCH_URL = "https://scratch.mit.edu/users/KhromaCodes/";
 
+const BOING_SFX = document.getElementById("boing-sfx");
+const SHOT_SFX = document.getElementById("shot-sfx");
+
 // Preload PNG frames
 const frames = [];
 for (let i = 0; i < PNG_FRAME_COUNT; i++) {
@@ -40,10 +43,12 @@ container.addEventListener('click', async () => {
 
     // 2. After a short delay, jump up (ease out)
     await wait(600);
+    await playSnippet(BOING_SFX, 0, 800);
     await animateJump(JUMP_HEIGHT, 300, 'easeOut');
 
     // Bounce when shooting
     await wait(500);
+    await playSnippet(SHOT_SFX, 300, 800);
     await animateJump((JUMP_HEIGHT + 50), 50, 'easeOut');
 
     // 3. Open Scratch link after a short delay
@@ -117,4 +122,17 @@ function playPNGSequence() {
 
 function wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function playSnippet(audio, start, end) {
+    audio.currentTime = start / 1000;
+    audio.volume = 0.6;
+    audio.play();
+    const handler = () => {
+        if (audio.currentTime >= end / 1000) {
+            audio.pause();
+            audio.removeEventListener('timeupdate', handler);
+        }
+    };
+    audio.addEventListener('timeupdate', handler);
 }
