@@ -8,8 +8,8 @@
 
 #scratch-jump {
     position: fixed;
-    left: -100px;
-    bottom: -250px;
+    left: 300px;
+    bottom: -220px;
     /* Only eyes visible, adjust as needed */
     overflow: hidden;
     z-index: 1000;

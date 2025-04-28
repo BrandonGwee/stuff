@@ -9,7 +9,7 @@ const SCRATCH_URL = "https://scratch.mit.edu/users/KhromaCodes/";
 const frames = [];
 for (let i = 0; i < PNG_FRAME_COUNT; i++) {
     const img = new Image();
-    img.src = `../pictures/scratch+open+tab/frame_${String(i + 1).padStart(5, '0')}.png`; // e.g., frames/frame01.png
+    img.src = `../pictures/scratch-open-tab/frame${String(i).padStart(4, '0')}.png`; // e.g., frames/frame01.png
     frames.push(img);
 
     console.log(img.src);
@@ -57,7 +57,7 @@ container.addEventListener('click', async () => {
 
     // 6. Wait and return to original position (ease out)
     await wait(300);
-    await animateJump(-250, 100, 'easeOut');
+    await animateJump(-220, 100, 'easeOut');
 
     // 7. Reset state
     clickable = true;

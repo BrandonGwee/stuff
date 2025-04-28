@@ -13,6 +13,7 @@ const imgDown = '../pictures/bleep/bleep-button-pressed.png';
 // Preload images to avoid flicker/alt text
 const preloadUp = new Image();
 preloadUp.src = imgUp;
+console.log(preloadUp.src);
 const preloadDown = new Image();
 preloadDown.src = imgDown;
 
@@ -49,7 +50,7 @@ function playLoopSnippet(audio, start, end) {
 function stopLoopSnippet(audio) {
   audio.pause();
   audio.ontimeupdate = null;
-} 
+}
 
 // Track if button is pressed to avoid duplicate triggers
 let isPressed = false;
@@ -80,7 +81,7 @@ btn.addEventListener('mouseup', stopCensor);
 btn.addEventListener('mouseleave', stopCensor);
 
 // Mobile
-btn.addEventListener('touchstart', startCensor, {passive: false});
+btn.addEventListener('touchstart', startCensor, { passive: false });
 btn.addEventListener('touchend', stopCensor);
 btn.addEventListener('touchcancel', stopCensor);
 
