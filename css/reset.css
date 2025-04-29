@@ -1,5 +1,5 @@
 body {
-    font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .sidenav {
@@ -37,8 +37,13 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
 .cagey {
@@ -48,7 +53,8 @@ body {
 
 #gallery {
   position: relative;
-  width: 135%;
-  padding-left: 10%;
+  width: 40em;
+  padding-left: 2rem;
+  padding-top: 2rem;
   background-color: bisque;
 }

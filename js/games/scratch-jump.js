@@ -48,13 +48,13 @@ container.addEventListener('click', async () => {
 
     // Bounce when shooting
     await wait(500);
-    await playSnippet(SHOT_SFX, 300, 800);
+    await playSnippet(SHOT_SFX, 300, 1200);
     await animateJump((JUMP_HEIGHT + 50), 50, 'easeOut');
 
     // 3. Open Scratch link after a short delay
     setTimeout(() => {
         window.open(SCRATCH_URL, '_blank');
-    }, 300);
+    }, 200);
 
     // 5. Fall down (ease in)
     await wait(400);
