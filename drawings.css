@@ -1,0 +1,32 @@
+ #gallery {}
+ 
+ iframe {
+   width: 384px;
+   height: calc(384px / 16 * 7.8);
+ }
+ 
+ .drawing img,
+ iframe,
+ video {
+   position: relative;
+   max-width: 95%;
+   max-height: 95%;
+   left: 2%;
+   
+   border-style: solid;
+   border-width: 2px;
+   border-color: cornflowerblue;
+ }
+ 
+ .drawing {
+  position: relative;
+  display: block;
+  background-color: skyblue;
+  overflow: hidden;
+  padding: 5%;
+  margin-bottom: 50px;
+  
+  border-style: solid;
+  border-width: 5px;
+  border-color: cornflowerblue;
+ }
