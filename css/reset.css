@@ -51,10 +51,7 @@ body {
   font-size: smaller;
 }
 
-#gallery {
-  position: relative;
-  width: 40em;
-  padding-left: 2rem;
-  padding-top: 2rem;
-  background-color: bisque;
+.aside {
+  display: block;
+  color: gray;
 }
