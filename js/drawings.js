@@ -1,4 +1,4 @@
-import drawingsData from "../drawings/drawings-data.js";
+import drawingsData from "./drawings-data.js";
 
 const gallery = document.getElementById("gallery");
 
