@@ -3,20 +3,20 @@ import drawingsData from "./drawings-data.js";
 const gallery = document.getElementById("gallery");
 
 let content = "";
-for (const drawing of drawingsData) {
+for (let i=drawingsData.length; i>0; i--) {
   
   let media = "";
   
-  switch (drawing.tag) {
+  switch (drawingsData[i].tag) {
     case "img":
-      media = "<img src=\"../pictures/" + drawing.name + "\">"
+      media = "<img src=\"../pictures/" + drawingsData[i].name + "\">"
       break;
     case "video":
       media = "<video width=\"384px\" autoplay muted loop controls>" +
-        "<source src=\"../pictures/" + drawing.name + `\" type=\"video/${drawing.name.split('.')[1]}\">`;
+        "<source src=\"../pictures/" + drawingsData[i].name + `\" type=\"video/${drawingsData[i].name.split('.')[1]}\">`;
       break;
     case "iframe":
-      media = "<iframe src=\"" + drawing.link + "\"></iframe>"
+      media = "<iframe src=\"" + drawingsData[i].link + "\"></iframe>"
       break;
       
     default:
@@ -26,8 +26,8 @@ for (const drawing of drawingsData) {
   
   content += "<div class=\"drawing\">" +
   "<dt>" + media + "</dt>" +
-    "<dd>" + drawing.description +
-    (drawing.aside.length > 0 ? "<span class=\"aside\">(" + drawing.aside + ")</span>" : "") +
+    "<dd>" + drawingsData[i].description +
+    (drawingsData[i].aside.length > 0 ? "<span class=\"aside\">(" + drawingsData[i].aside + ")</span>" : "") +
     "</dd>" +
     "</div>"
 }
