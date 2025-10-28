@@ -3,7 +3,7 @@ import drawingsData from "./drawings-data.js";
 const gallery = document.getElementById("gallery");
 
 let content = "";
-for (let i=drawingsData.length; i>0; i--) {
+for (let i = drawingsData.length-1; i >= 0; i--) {
   
   let media = "";
   
@@ -25,7 +25,7 @@ for (let i=drawingsData.length; i>0; i--) {
   }
   
   content += "<div class=\"drawing\">" +
-  "<dt>" + media + "</dt>" +
+    "<dt>" + media + "</dt>" +
     "<dd>" + drawingsData[i].description +
     (drawingsData[i].aside.length > 0 ? "<span class=\"aside\">(" + drawingsData[i].aside + ")</span>" : "") +
     "</dd>" +
